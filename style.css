@@ -116,7 +116,7 @@ a.left:hover::before {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 100px 85px;
+  padding: 200px 85px 120px 85px;
 }
 .herocontent {
   padding-top: 60px;

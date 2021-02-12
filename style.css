@@ -1,0 +1,705 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap");
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  color: #cccccc;
+}
+body {
+  background-color: #2b2c2c;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #8a8fa3;
+}
+ul {
+  list-style: none;
+}
+/* Navbar */
+#navbar {
+  background-color: #2b2c2c;
+}
+/* Container inside navbar */
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+/* color of links inside the container */
+.container a {
+  color: #fff;
+}
+/* The logo */
+.container h1 a {
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 60px;
+  color: #fbd214;
+}
+
+/* The navigation list */
+.container ul {
+  list-style: none;
+  padding-top: 20px;
+  display: flex;
+}
+
+/* The navigation items */
+.container ul li {
+  font-size: 14px;
+  font-family: poppins;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+/* The navigation links */
+.container ul li a {
+  display: block;
+  padding-left: 20px;
+  text-align: center;
+}
+
+/* Hover color of the menu items and the active item */
+.container ul li a:hover {
+  color: #fdb533;
+}
+.container ul li .active {
+  color: #fdb533;
+}
+
+/* The underline hover effect for the menu items */
+li a.left {
+  position: relative;
+}
+
+li a.left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 10;
+  background-color: #fdb533;
+  transition: all 0.3s ease-in-out;
+}
+a.left:hover::before {
+  width: 50%;
+}
+/* for the active link to stay underlined */
+.container ul li .active::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 10;
+  background-color: #fdb533;
+  transition: all 0.3s ease-in-out;
+}
+.hero {
+  background-color: #2b2c2c;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 85px;
+}
+.herocontent {
+  padding-top: 60px;
+  letter-spacing: 3px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.position {
+  font-size: 23px;
+  line-height: 35px;
+  color: #cccccc;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.herobutton {
+  background-color: #fdb533;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 60px;
+  padding: 0px 70px;
+  outline: none;
+  border: 1px solid #fdb533;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+}
+.herobutton:hover {
+  background-color: #2b2c2c;
+  color: #fdb533;
+}
+.heroimg {
+  padding-right: 60px;
+}
+.heroimg img {
+  width: 400px;
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+/* About section */
+
+.about-page {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding: 120px 20px 120px 0;
+  background-color: #303131;
+}
+.aboutme {
+  position: relative;
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: "Poppins";
+  color: #cccccc;
+  padding-bottom: 20px;
+  padding-left: 125px;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+.line {
+  text-decoration: none;
+  position: relative;
+}
+
+.line:after {
+  position: absolute;
+  content: "";
+  height: 4px;
+
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background: #feb633;
+
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.aboutimage {
+  background: linear-gradient(
+      20deg,
+      rgba(48, 49, 49, 0.3),
+      rgba(48, 49, 49, 0.3)
+    ),
+    url("https://i.ibb.co/vdZpYhj/about.png");
+  background-position: right 30% bottom 50%;
+  background-repeat: no-repeat;
+}
+.aboutcontent p {
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 400;
+  line-height: 28px;
+  padding-right: 155px;
+  color: #9f9f9f;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+.aboutbutton1 {
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #fff;
+  background-color: #feb633;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #feb633;
+  margin-right: 27px;
+  padding: 15px 45px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.aboutbutton1:hover {
+  background-color: #2b2c2c;
+  color: #fdb533;
+  border-color: #fdb533;
+}
+.aboutbutton2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #feb633;
+  background-color: #2b2c2c;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #feb633;
+  margin-right: 27px;
+  padding: 15px 45px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.aboutbutton2:hover {
+  background-color: #fdb533;
+  color: #fff;
+  border-color: #fdb533;
+}
+
+/* Servicers Section*/
+.servicesContainer {
+  background-color: #2b2c2c;
+}
+.services {
+  width: 86%;
+  margin: 0 auto;
+  padding: 130px 0;
+}
+.servicesText {
+  text-align: center;
+  color: #cccccc;
+}
+.servicesText h1 {
+  font-size: 45px;
+  line-height: 54px;
+  margin-bottom: 20px;
+}
+.line {
+  text-decoration: none;
+  position: relative;
+}
+
+.line:after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  bottom: -15px;
+  left: 45%;
+  right: 0;
+  width: 10%;
+  background: #feb633;
+
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.servicesText p {
+  color: #9f9f9f;
+  font-size: 16px;
+  line-height: 28px;
+  width: 67%;
+  margin: 0 auto;
+}
+.cards {
+  margin-top: 91px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 25px;
+}
+.card {
+  width: 571px;
+  height: 315px;
+  position: relative;
+  border-radius: 10px;
+  padding: 52px 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* animation: cardMove 2s linear;   I have used AOS library instead*/
+}
+
+/* @keyframes cardMove {
+    from {
+      bottom: -100px;
+    }
+    to {
+      bottom: 0px;
+    }
+  } */
+.cardtitle {
+  padding: 20px 0;
+  font-size: 32px;
+  font-weight: 500;
+}
+.card p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.card1 {
+  background: linear-gradient(
+      to right,
+      rgba(39, 150, 236, 0.9),
+      rgba(39, 150, 236, 0.9)
+    ),
+    url(https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80)
+      no-repeat top center;
+}
+
+.card2 {
+  background: linear-gradient(
+      to right,
+      rgba(250, 180, 32, 0.9),
+      rgba(250, 180, 32, 0.9)
+    ),
+    url(https://images.pexels.com/photos/5588490/pexels-photo-5588490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+      no-repeat top center;
+}
+.card3 {
+  background: linear-gradient(
+      to right,
+      rgba(209, 61, 196, 0.9),
+      rgba(209, 61, 196, 0.9)
+    ),
+    url(https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)
+      no-repeat top center;
+}
+.card4 {
+  background: linear-gradient(
+      to right,
+      rgba(22, 202, 80, 0.9),
+      rgba(22, 202, 80, 0.9)
+    ),
+    url(https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)
+      no-repeat top center;
+}
+
+/* Works Section */
+.worksContainer {
+  padding: 131px 0;
+  text-align: center;
+  background-color: #303131;
+  color: azure;
+}
+.worksContainer .line {
+  margin-bottom: 50px;
+}
+.categoryList {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  list-style: none;
+  margin-bottom: 40px;
+}
+.categoryList .active {
+  color: #feb633;
+  text-decoration: underline;
+}
+.categoryList li {
+  cursor: pointer;
+}
+.categoryList li:hover {
+  color: #feb633;
+}
+.griddy {
+  display: flex;
+  justify-content: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 268px);
+  grid-template-rows: repeat(3, 274px);
+  gap: 15px;
+  grid-template-areas:
+    "one one two three"
+    "one one four five"
+    "six seven eight eight";
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+.cardhover {
+  position: relative;
+}
+.popup,
+.firstpopup {
+  position: absolute;
+  max-width: 220px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.6s;
+}
+.popup,
+.firstpopup h2 {
+  width: 225px;
+}
+/* this creates an overlay but no bottom-top transition
+  .cardhover:hover {
+    background-color: #f7d456;
+    opacity: 1;
+  } */
+.cardhover:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.cardhover:hover:after {
+  opacity: 0.8;
+  background-color: #f7d456;
+  height: 100%;
+}
+.cardhover h2 {
+  margin: 10px 0;
+  cursor: pointer;
+  color: #fff;
+}
+.cardhover i,
+p {
+  color: #fff;
+}
+.cardhover:hover .popup {
+  bottom: 5%;
+  opacity: 1;
+  z-index: 4;
+}
+.cardhover:hover .firstpopup {
+  bottom: 35%;
+  opacity: 1;
+  z-index: 4;
+}
+
+.cardhover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+.cardhover:hover img {
+  opacity: 0.5;
+}
+.experience {
+  padding: 131px 70px;
+}
+.experience h1 {
+  margin-bottom: 50px;
+}
+.workCards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #333333;
+}
+.workCard {
+  border: 1px solid #686868;
+  padding: 70px 30px;
+}
+.workCard h3 {
+  color: white;
+}
+.workCard p {
+  color: #8a8fa3;
+}
+.workCard:hover {
+  background-color: #fec110;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.workCard:hover h3 {
+  color: #2b2c2c;
+}
+
+.workCard:hover p {
+  color: #2b2c2c;
+}
+.question {
+  text-align: center;
+  background-color: #303131;
+  padding: 140px 0px;
+}
+.question h1 {
+  font-size: 45px;
+  line-height: 65px;
+  padding-bottom: 20px;
+}
+.question .line:after {
+  bottom: 0;
+  width: 10%;
+}
+.question button {
+  margin-top: 40px;
+  padding: 0px 70px;
+  font-size: 20px;
+  line-height: 55px;
+  color: black;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.question button:hover {
+  background-color: #fdb533;
+  border: 1px solid #fdb533;
+  color: white;
+}
+.contact {
+  padding: 130px 0;
+}
+.contact h1 {
+  font-size: 45px;
+  line-height: 65px;
+  padding-bottom: 20px;
+}
+.contact .line {
+  text-align: center;
+}
+.contact .line:after {
+  bottom: 0;
+  width: 10%;
+}
+.infoContact {
+  padding: 80px;
+}
+.info i:hover {
+  color: #fdb533;
+}
+.contactForm,
+label {
+  color: #777777;
+}
+.contactForm {
+  width: 65%;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 15px 20px;
+  margin: 18px 0;
+  display: inline-block;
+  background-color: #363737;
+  border: 1px solid #363737;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+.phone-email {
+  display: flex;
+  justify-content: space-between;
+}
+.phone,
+.email {
+  width: 48%;
+}
+input[type="submit"] {
+  background-color: #fec110;
+  color: white;
+  padding: 20px 40px;
+  margin: 8px 0;
+  border: 2px solid #fec110;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: transparent;
+  color: #fec110;
+  border-color: #fec110;
+}
+.message {
+  width: 100%;
+  padding: 30px;
+  margin-top: 18px;
+  background-color: #363737;
+  border: 1px solid #363737;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+}
+
+.infoContact {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom {
+  padding-top: 5px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.bottomLogo {
+  font-size: 50px;
+  color: #fbd214;
+  margin: 30px 0;
+}
+.bottom p {
+  margin-bottom: 45px;
+  line-height: 2rem;
+  color: #777777;
+}
+.bottom i {
+  padding: 15px;
+  border-radius: 25px;
+  background-color: #363737;
+  transition: 0.4s;
+}
+.bottom i:hover {
+  background-color: #fbd214;
+  color: white;
+}
+footer {
+  padding: 20px 0;
+  border-top: 1px solid #363737;
+  text-align: center;
+}
+footer p {
+  color: #777777;
+}
+footer span {
+  color: #fbd214;
+}

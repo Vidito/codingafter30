@@ -141,12 +141,15 @@ a.left:hover::before {
   margin-bottom: 50px;
 }
 .herobutton {
-  background-color: #fdb533;
   font-weight: 500;
   font-size: 20px;
   line-height: 60px;
   padding: 0px 70px;
   outline: none;
+   background: linear-gradient(to right, #fdb533 50%, transparent 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
   border: 1px solid #fdb533;
   border-radius: 5px;
   cursor: pointer;
@@ -154,8 +157,8 @@ a.left:hover::before {
   transition: 0.5s;
 }
 .herobutton:hover {
-  background-color: #2b2c2c;
   color: #fdb533;
+  background-position: right
 }
 .heroimg {
   padding-right: 60px;
